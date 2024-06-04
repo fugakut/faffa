@@ -71,9 +71,114 @@ section{
     align-items: center;
     border: 2px solid  #2B2D35;
     box-shadow: 5px 5px 0 #000000;
-    
+    transition-duration: 0.3s;
 }
 .button a {
     font-size: 20px;
     text-decoration: none;
+}
+.button:hover{
+    background-color: chartreuse;
+    
+}
+.main-content{
+z-index: 2;
+}
+.planet{
+    background: url(./img/planet.png);
+    background-repeat: no-repeat;
+    width: 405px;
+    height: 330px;
+    transform: rotate(-176deg);
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+}
+.rectangle{
+    width: 200px;
+    height: 80px;
+    background-color: #000000;
+    animation-name:color12 ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes color12 {
+    from{background-color: black;
+    transform: translate(100px,50px);}
+    50%{width: 10px;
+    background-color: orange;}
+
+    to{background-color: aqua;
+    transform: rotate(30deg);}
+    
+}
+.moving-planet{
+    background: url(img/moving-planet.png);
+    position: absolute;
+    z-index: 3;
+    width: 200px;
+    height: 200px;
+    bottom: 30px;
+    left: 30px;
+    background-repeat: no-repeat;
+    transform:rotate(-15deg);
+    animation-name: moving-planet;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes moving-planet {
+    from{transform: translateX(0px);}
+    to {transform: translateY(40px);}
+}
+.title{
+    padding-top: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 80px;
+    text-shadow:
+    5px 5px 0 black;
+}
+.about-content{
+    width: 35%;
+    height: 270px;
+    padding-top: 40px;
+    padding-left: 40px;
+    background: #792aff;
+    position: relative;
+    border-radius: 0PX 0PX 0PX 20PX;
+    display: flex;
+}
+.about-title {
+    color: #fff;
+    font-size: 20px;
+    max-width: 463px;
+    margin-bottom: 20px;
+    font-family:'Comfortaa';
+}
+.about-card{
+    background-image: url(img/form2.png);
+    width: 376px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+
+}
+.about-card p{
+    color: #000;
+    font-size: 17px;
+    display: flex;
+    align-self: start;
+    padding-left: 20px;
+    line-height: 25px;
+    font-family: 'Comfortaa';
+}
+.about-card img{
+    padding-bottom: 20px;
 }
