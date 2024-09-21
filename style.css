@@ -157,6 +157,9 @@ z-index: 2;
     margin-bottom: 20px;
     font-family:'Comfortaa';
 }
+.about-card img{
+    padding-bottom: 20px;
+}
 .about-card{
     background-image: url(img/form2.png);
     width: 376px;
@@ -181,4 +184,43 @@ z-index: 2;
 }
 .about-card img{
     padding-bottom: 20px;
+}
+.cloud{
+    background: url(img/cloud.png);
+    position: absolute;
+    z-index: 3;
+    width: 200px;
+    height: 200px;
+    bottom: 30px;
+    left: 0px;
+    background-repeat: no-repeat;
+    animation-name: cloud;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes cloud {
+    from{transform: translateX(0px);}
+    to {transform: translateY(40px);}
+}
+.skills-card{
+    background: url(img/form3.png);
+    background-repeat: no-repeat;
+    display: flex;
+    padding-left:10px ;
+    margin: 20px;
+    flex-direction: column;
+    background-size: contain;
+    height: 450px;
+    align-items: center;
+    margin-top:100px;
+}
+.skills-card p{
+    color: #000;
+    font-size: 18px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 500px;
+    font-family: 'Comfortaa';
 }
